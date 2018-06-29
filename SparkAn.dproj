@@ -1,0 +1,303 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{af7b0175-bf77-45a8-8476-f689a8dbaeb0}</ProjectGuid>
+        <MainSource>SparkAn.DPR</MainSource>
+        <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <DCC_DependencyCheckOutputName>SparkAn.exe</DCC_DependencyCheckOutputName>
+        <ProjectVersion>15.3</ProjectVersion>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <FrameworkType>VCL</FrameworkType>
+        <Base>True</Base>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <TargetedPlatforms>3</TargetedPlatforms>
+        <AppType>Application</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_MinorVer>14</VerInfo_MinorVer>
+        <VerInfo_MajorVer>4</VerInfo_MajorVer>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;FMXTee;VCLTee;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=Adrian D. Bonev &amp; Mark T. Nelson;FileDescription=SparkAn;FileVersion=4.14.0.0;InternalName=SparkAn;LegalCopyright=Adrian D. Bonev &amp; Mark T. Nelson;LegalTrademarks=N/A;OriginalFilename=SparkAn;ProductName=SparkAn;ProductVersion=4.14.0.0;Comments=July 19, 2011</VerInfo_Keys>
+        <DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;inetdb;webdsnap;websnap;inetdbbde;inetdbxpress;soaprtl;vclribbon;DbxCommonDriver;DbxClientDriver;DBXInterBaseDriver;DBXMySQLDriver;dbexpress;dbxcds;TeeTree2D14Tee8;TeeWorld814;TeeImage814;TeeLanguage814;TeePro814;TeeGL814;TeeUI814;TeeDB814;Tee814;TMSSmoothControlsPackPkgD2010;FixStartPage;MyComponents;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_DependencyCheckOutputName>SparkAn.exe</DCC_DependencyCheckOutputName>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <Icon_MainIcon>SparkAn_Icon.ico</Icon_MainIcon>
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <Icon_MainIcon>SparkAn_Icon.ico</Icon_MainIcon>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Version>7.0</Version>
+        <DCC_AssertionsAtRuntime>False</DCC_AssertionsAtRuntime>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_StackSize>327680,5242880</DCC_StackSize>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_MinorVer>15</VerInfo_MinorVer>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=4.15.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <VerInfo_Release>3</VerInfo_Release>
+        <VerInfo_MajorVer>5</VerInfo_MajorVer>
+        <Manifest_File>RequireAdministratorRights_NoThemes.manifest</Manifest_File>
+        <VerInfo_MinorVer>5</VerInfo_MinorVer>
+        <VerInfo_Keys>CompanyName=Adrain D. Bonev &amp; Mark T. Nelson;FileDescription=June 27, 2018;FileVersion=5.5.3.0;InternalName=;LegalCopyright=Adrain D. Bonev &amp; Mark T. Nelson;LegalTrademarks=;OriginalFilename=SparkAn;ProductName=SparkAn 64-bit (5.5.2.3);ProductVersion=5.5.3.0;Comments=February 8, 2018</VerInfo_Keys>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <Version>7.0</Version>
+        <DCC_AssertionsAtRuntime>False</DCC_AssertionsAtRuntime>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_StackSize>327680,5242880</DCC_StackSize>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Parameters>
+                    <Parameters Name="UseLauncher">False</Parameters>
+                    <Parameters Name="LoadAllSymbols">True</Parameters>
+                    <Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+                </Parameters>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">4</VersionInfo>
+                    <VersionInfo Name="MinorVer">14</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName">Adrian D. Bonev &amp; Mark T. Nelson</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileDescription">SparkAn</VersionInfoKeys>
+                    <VersionInfoKeys Name="FileVersion">4.14.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName">SparkAn</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalCopyright">Adrian D. Bonev &amp; Mark T. Nelson</VersionInfoKeys>
+                    <VersionInfoKeys Name="LegalTrademarks">N/A</VersionInfoKeys>
+                    <VersionInfoKeys Name="OriginalFilename">SparkAn</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductName">SparkAn</VersionInfoKeys>
+                    <VersionInfoKeys Name="ProductVersion">4.14.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments">July 19, 2011</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design190.bpl">File C:\Program Files (x86)\Raize\CS5\Bin\CodeSiteExpressPkg_Design190.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k190.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp190.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+                <Source>
+                    <Source Name="MainSource">SparkAn.DPR</Source>
+                </Source>
+            </Delphi.Personality>
+            <ModelSupport>False</ModelSupport>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">True</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Main.pas">
+            <Form>MainForm</Form>
+        </DCCReference>
+        <DCCReference Include="unGlobUnit.pas"/>
+        <DCCReference Include="unMainWindow.pas">
+            <Form>frmMainWin</Form>
+        </DCCReference>
+        <DCCReference Include="unImageControl.pas">
+            <Form>frmImageControl</Form>
+        </DCCReference>
+        <DCCReference Include="unAverIm.pas">
+            <Form>frmAverIm</Form>
+        </DCCReference>
+        <DCCReference Include="unTimeSerAnal.pas">
+            <Form>frmTimeSerPlot</Form>
+        </DCCReference>
+        <DCCReference Include="unFrameTimSerPlot.pas">
+            <Form>FrameTimSerPlot</Form>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="unSPautoSearch.pas">
+            <Form>frmSPautoSearch</Form>
+        </DCCReference>
+        <DCCReference Include="unSparkTable.pas">
+            <Form>frmSparkTable</Form>
+        </DCCReference>
+        <DCCReference Include="unWaveTable.pas">
+            <Form>frmWaveTable</Form>
+        </DCCReference>
+        <DCCReference Include="unOKDlgNrImToExp.pas">
+            <Form>frmOKDlgNrImtoExp</Form>
+        </DCCReference>
+        <DCCReference Include="unOptionsPageDlg.pas">
+            <Form>OptionsPagesDlg</Form>
+        </DCCReference>
+        <DCCReference Include="unQueueFiles.pas">
+            <Form>frmQueueFiles</Form>
+        </DCCReference>
+        <DCCReference Include="unFileComment.pas">
+            <Form>frmMarkComment</Form>
+        </DCCReference>
+        <DCCReference Include="About.pas">
+            <Form>AboutBox</Form>
+        </DCCReference>
+        <DCCReference Include="unPeaks.pas">
+            <Form>frmPeaks</Form>
+        </DCCReference>
+        <DCCReference Include="unHelp.pas">
+            <Form>frmHelp</Form>
+        </DCCReference>
+        <DCCReference Include="unFileList.pas">
+            <Form>frmFileList</Form>
+        </DCCReference>
+        <DCCReference Include="unPlayBack.pas">
+            <Form>frmPlayback</Form>
+        </DCCReference>
+        <DCCReference Include="MovieLabels.pas">
+            <Form>frmMovieLabels</Form>
+        </DCCReference>
+        <DCCReference Include="unProgress.pas">
+            <Form>frmProgress</Form>
+        </DCCReference>
+        <DCCReference Include="unAndorImageDescr.pas">
+            <Form>frmAndorImageDescr</Form>
+        </DCCReference>
+        <DCCReference Include="unSlaveTSPlot.pas">
+            <Form>frmSlaveTSPlot</Form>
+        </DCCReference>
+        <DCCReference Include="unSpatialSpread.pas">
+            <Form>frmSpatialSpread</Form>
+        </DCCReference>
+        <DCCReference Include="un3DImageWin.pas">
+            <Form>frm3DImageWin</Form>
+        </DCCReference>
+        <DCCReference Include="un3DImageContr.pas">
+            <Form>frm3DImageContr</Form>
+        </DCCReference>
+        <DCCReference Include="unLineScan.pas">
+            <Form>frmLineScan</Form>
+        </DCCReference>
+        <DCCReference Include="unSurfaceROI.pas">
+            <Form>frmSurfaceROI</Form>
+        </DCCReference>
+        <DCCReference Include="unCopyWindow.pas">
+            <Form>frmCopyWindow</Form>
+        </DCCReference>
+        <DCCReference Include="unHistogram.pas">
+            <Form>frmTimeHistograms</Form>
+        </DCCReference>
+        <DCCReference Include="DigiFilters.pas"/>
+        <DCCReference Include="Convert.pas"/>
+        <DCCReference Include="unEventSites.pas">
+            <Form>frmEventSites</Form>
+        </DCCReference>
+        <DCCReference Include="unCorrectForBleaching.pas">
+            <Form>frmCorrectForBleaching</Form>
+        </DCCReference>
+        <DCCReference Include="unIntegrate.pas">
+            <Form>frmIntegrate</Form>
+        </DCCReference>
+        <DCCReference Include="unKalmanStackFilter.pas">
+            <Form>frmKalmanStackFilter</Form>
+        </DCCReference>
+        <DCCReference Include="unFunctions.pas"/>
+        <DCCReference Include="unInputDialog.pas">
+            <Form>frmInputDialog</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="un2ndWin.pas">
+            <Form>frm2ndWin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unMergeWindow.pas">
+            <Form>frmMergeWin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ImageFilesOpeningRoutines.pas"/>
+        <DCCReference Include="OrthogonalSectioning.pas">
+            <Form>frmOrthogonalSectioning</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unXYprofile.pas">
+            <Form>frmXYprofile</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unRealLineScan.pas">
+            <Form>frmRealLineScan</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+</Project>

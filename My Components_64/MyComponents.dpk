@@ -1,0 +1,55 @@
+package MyComponents;
+
+{$R *.res}
+{$R 'UniButton.dcr'}
+{$R 'DSlider.dcr'}
+{$R 'EditNumerical.dcr'}
+{$R 'LabelExt.dcr'}
+{$R 'OpenPictureDialogA.dcr'}
+{$R 'PwrSave.dcr'}
+{$R 'SuperSubLabel.dcr'}
+{$R 'ThdTimer.dcr'}
+{$R 'PanelPaintCanvas.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE RELEASE}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vcl,
+  vclimg;
+
+contains
+  UniButton in 'UniButton.pas',
+  DSlider in 'DSlider.pas',
+  EditNumerical in 'EditNumerical.pas',
+  LabelExt in 'LabelExt.pas',
+  OpenPictureDialogA in 'OpenPictureDialogA.pas',
+  PwrSave in 'PwrSave.pas',
+  SuperSubLabel in 'SuperSubLabel.pas',
+  ThdTimer in 'ThdTimer.pas',
+  PanelPaintCanvas in 'PanelPaintCanvas.pas';
+
+end.
